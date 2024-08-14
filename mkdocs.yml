@@ -1,0 +1,58 @@
+site_name: SwiftCloud Docs
+nav:
+ - Introduction: index.md
+ - Services:
+   - Billing: billing.md
+   - Domains:
+     - Overview: domains.md
+     - Domain Management: api/domains.md
+     - DNS Management: api/dns.md
+   - VM: vm.md
+   - Web Services: web.md
+   - Databases: dbaas.md
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: custom
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+
+extra_css:
+  - stylesheets/custom.css
+
+markdown_extensions:
+  - tables
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - search
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true
