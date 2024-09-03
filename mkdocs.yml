@@ -2,14 +2,14 @@ site_name: SwiftCloud Docs
 nav:
  - Introduction: index.md
  - Services:
-   - Billing: billing.md
    - Domains:
      - Overview: domains.md
      - Domain Management: api/domains.md
      - DNS Management: api/dns.md
+   - Serverless: serverless.md
    - VM: vm.md
-   - Web Services: web.md
    - Databases: dbaas.md
+   - Billing: billing.md
 theme:
   name: material
   palette:
@@ -45,6 +45,9 @@ extra_css:
 markdown_extensions:
   - tables
   - pymdownx.details
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.superfences:
