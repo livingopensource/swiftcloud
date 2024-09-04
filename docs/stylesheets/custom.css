@@ -1,3 +1,7 @@
 :root {
     --md-primary-fg-color:        #000000;
   }
+
+  a:link, a:visited {
+    color: #4e6cbe;
+  }
