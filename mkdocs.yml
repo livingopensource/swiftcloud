@@ -1,4 +1,5 @@
 site_name: SwiftCloud Docs
+site_url: https://docs.swiftcloud.co.zm
 nav:
  - Introduction: index.md
  - Services:
