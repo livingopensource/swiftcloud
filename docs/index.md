@@ -4,18 +4,34 @@ SwiftCloud is a self-service cloud infrastructure platform designed to accelerat
 
 With SwiftCloud, developers and businesses gain unprecedented control over their cloud environments. Our platform is built to handle the demands of mission-critical workloads, empowering organizations to localize data and adhere to stringent regulations.
 
-Our mission is to make bleeding edge technology accessible to every developer, creator, and innovator. We believe the "Cloud" is a phylosophy of providing ICT infrastructure and services via the internet.
-SwiftCloud gets you from prototype to production in a weekend. All you need is an internet connection and some digital cash.
+Our mission is to make bleeding edge technology accessible to every developer, creator, and innovator. We believe the "Cloud" is a philosophy of providing ICT infrastructure and services via the internet.
+SwiftCloud provides a platform for developers to build and deploy applications on a managed cloud that provides high availability, self healing capabilities and security out of the box.
 
-At the core of all SwiftCloud platform services, is simplicity. From an easy to use user interface (UI) to a platform that makes cloud native technologies as easy as writing a `Dockerfile`.
+At the core of all SwiftCloud platform services, is simplicity. From an easy to use user interface (UI) to a platform that makes cloud native technologies as easy as writing a `Hello World` app.
 
 ???+ tip "SwiftCloud"
 
     A trully developer first cloud platform.
 
-## Architecural Design Phylosophy
+## Architecural Design Philosophy
 
-SwiftCloud is build with scale, resilience, fault torelance and high availability in mind. To achieve all this, we follow the methodology of [12 factor apps](https://12factor.net) 
+SwiftCloud is build with scale, resilience, fault torelance and high availability in mind. To achieve all this, we follow the methodology of [12 factor apps](https://12factor.net).
+
+Building on this approach, SwiftCloud is built to be a platform that is easy to use, easy to manage and easy to scale.
+For this reason we chose  to use Kubernetes as the underlying infrastructure for our platform. To get up and running a self hosted SwiftCloud cluster, below are the prerequisites:
+
+*NOTE:* The ticked ones are mandatory, while the others are optional
+
+### Prerequisites
+
+- [x] __Kubernetes__: A kubernetes cluster running version v1.25 or higher.
+- [x] __Knative Eventing__: A Knative Eventing running version v1.15 or higher.
+- [x] __Ory Kratos__: A Ory Kratos instance running version v1.2.0 or higher.
+- [x] __Ory Keto__: A Ory Keto instance running version v0.15.0 or higher.
+- [ ] __Knative Serving__: A Knative Serving instance running version 1.15 or higher.
+- [ ] __Cloud Native PostgreSQL__: CNPG version v1.24.0 or higher
+- [ ] __KubeVirt__: A KubeVirt instance running version v1.2.0 or higher
+
 
 ## API Conventions
 

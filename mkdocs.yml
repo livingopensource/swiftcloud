@@ -38,6 +38,10 @@ theme:
   features:
     - navigation.instant
     - navigation.instant.progress
+    - navigation.instant.prefetch
+    - toc.integrate
+    - navigation.top
+    - navigation.tabs
 
 extra_css:
   - stylesheets/custom.css
