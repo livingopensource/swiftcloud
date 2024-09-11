@@ -1,3 +1,8 @@
+---
+tags:
+  - Architecure
+  - Philosophy
+---
 # SwiftCloud
 
 SwiftCloud is a self-service cloud infrastructure platform designed to accelerate development, by offering a local, cost-effective, and compliant solution, built on top of open source technologies.

@@ -10,20 +10,28 @@ nav:
    - VM: vm.md
    - Databases: dbaas.md
    - Billing: billing.md
+ - Blog:
+    - blog/index.md
+ - References: references.md
 theme:
   name: material
+  icon:
+    logo: material/cloud
+  favicon: assets/favicon.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       primary: custom
+      accent: custom
+      scheme: default
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
 
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default
       primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -32,9 +40,10 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
-        name: Switch to system preference
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.instant.progress
@@ -42,6 +51,7 @@ theme:
     - toc.integrate
     - navigation.top
     - navigation.tabs
+    - navigation.footer
 
 extra_css:
   - stylesheets/custom.css
@@ -63,3 +73,9 @@ plugins:
   - search
   - neoteroi.mkdocsoad:
       use_pymdownx: true
+  - tags:
+      tags_file: references.md
+  - blog
+extra:
+  generator: false
+copyright: Copyright &copy; 2024 Living Open Source Foundation
