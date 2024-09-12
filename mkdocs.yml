@@ -1,16 +1,12 @@
-site_name: SwiftCloud Docs
+site_name: SwiftCloud Documentation
 site_url: https://docs.swiftcloud.co.zm
 nav:
- - Introduction: index.md
+ - Home: index.md
  - Services:
-   - Domains:
-     - Overview: domains.md
-     - Domain Management: api/domains.md
-     - DNS Management: api/dns.md
-   - Serverless: serverless.md
+   - Domains: domains.md
+   - Web Service: web-service.md
    - VM: vm.md
    - Databases: dbaas.md
-   - Billing: billing.md
  - Blog:
     - blog/index.md
  - References: references.md
