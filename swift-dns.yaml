@@ -1,0 +1,128 @@
+openapi: 3.0.0
+info:
+  title: DNS API
+  version: v1.0
+servers:
+  - url: https://graph.swiftcloud.co.zm
+components:
+  securitySchemes:
+    apikeyAuth:
+      type: http
+      scheme: apikey
+security:
+  - apikeyAuth: []
+paths:
+  /api/v1/servers/localhost/zones:
+    get:
+      tags:
+        - default
+      summary: List Zones
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: Create Zone
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: example.co.zm.
+                kind: Native
+                masters: []
+                nameservers:
+                  - ns1.osystems.africa.
+                  - ns2.osystems.africa.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/servers/localhost/zones/example.co.zm.:
+    get:
+      tags:
+        - default
+      summary: List Zone
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    patch:
+      tags:
+        - default
+      summary: Modify RRSets
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                rrsets:
+                  - name: test.example.co.zm.
+                    type: A
+                    ttl: 3600
+                    changetype: REPLACE
+                    records:
+                      - content: 192.168.0.5
+                        disabled: false
+                      - content: 192.168.1.5
+                        disabled: false
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/servers/localhost/zones/example.org.:
+    delete:
+      tags:
+        - default
+      summary: Delete Zone
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/servers/localhost/zones/example.co.zm./cryptokeys:
+    get:
+      tags:
+        - default
+      summary: Show Crypto Keys
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: Create Crypto Key
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                keytype: ksk
+                active: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/servers/localhost/zones/example.co.zm./cryptokeys/1:
+    delete:
+      tags:
+        - default
+      summary: Delete Key
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+
