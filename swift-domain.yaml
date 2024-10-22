@@ -1,0 +1,114 @@
+openapi: 3.0.0
+info:
+  title: SwiftDNS
+  version: v1.0
+servers:
+  - url: https://graph.swiftcloud.co.zm
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
+paths:
+  /000/api/v1.0/list/zones:
+    get:
+      tags:
+        - default
+      summary: List Zones
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1.0/user/e37be691-a30a-4586-80b0-08f5d6456389/zones:
+    get:
+      tags:
+        - default
+      summary: User Domains
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1.0/dig/google.com:
+    get:
+      tags:
+        - default
+      summary: DIG
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1.0/list/zones/example.co.zm:
+    get:
+      tags:
+        - default
+      summary: List Zone
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1.0/create/zones:
+    post:
+      tags:
+        - default
+      summary: Create Zone
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: localhost.org.zm.
+                kind: Native
+                nameservers:
+                  - ns1.osystems.africa.
+                  - ns2.osystems.africa.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1.0/update/zones/example.co.zm.:
+    patch:
+      tags:
+        - default
+      summary: Update DNS Zone Records
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                rrsets:
+                  - name: test.example.co.zm.
+                    type: A
+                    ttl: 3600
+                    changetype: REPLACE
+                    records:
+                      - content: 192.168.0.5
+                        disabled: false
+                      - content: 192.168.1.5
+                        disabled: false
+                      - content: 192.168.4.5
+                        disabled: false
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1.0/delete/zones/example.co.zm.:
+    delete:
+      tags:
+        - default
+      summary: Delete Zone
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+
