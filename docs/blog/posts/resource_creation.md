@@ -13,6 +13,8 @@ Below we outline a typical technical workflow for creating resources in SwiftClo
 
 SwiftCloud follows an event-driven architecture, where events trigger actions and workflows. This approach allows for flexible and scalable resource creation. To achieve this, we use a combination of tools and technologies, including:
 
+<!-- more -->
+
 - Knative Eventing: A serverless eventing platform that enables the creation of event-driven applications.
 - RabbitMQ: A message broker that facilitates communication between different components in the SwiftCloud platform.
 - Kubernetes: The underlying container orchestration platform that manages and deploys resources.
